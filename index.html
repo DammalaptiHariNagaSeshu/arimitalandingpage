@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ARIMITA is a parent venture company building the next generation of startups. Launching June 13, 2026.">
+<meta name="theme-color" content="#e8e8e8">
+<title>ARIMITA — A Venture Company</title>
+<link rel="canonical" href="https://arimita.com">
+<meta property="og:title" content="ARIMITA — A Venture Company">
+<meta property="og:description" content="ARIMITA is a parent venture company building the next generation of startups. Launching June 13, 2026.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arimita.com">
+<meta property="og:image" content="https://placehold.co/1200x630/e8e8e8/0d0d0d?text=ARIMITA">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="arimitalogo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ARIMITA",
+  "url": "https://arimita.com",
+  "logo": "arimitalogo.png",
+  "foundingDate": "2026-06-13",
+  "sameAs": [
+    "https://x.com/HariNagaSeshu?s=20",
+    "https://www.linkedin.com/in/hari-naga-seshu-596711324",
+    "https://www.instagram.com/harinagaseshu?igsh=MXRkamZ1bTdpbmZzMg=="
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #e8e8e8;
+  --text: #0d0d0d;
+  --primary: #0d0d0d;
+  --primary-hover: #2a2a2a;
+  --secondary: #0d0d0d;
+  --card-bg: #f0f0f0;
+  --card-border: #c8c8c8;
+  --border: #c8c8c8;
+  --input-bg: #ffffff;
+  --muted: #555555;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --font-display: 'Bebas Neue', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --text-h1: clamp(40px, 6vw, 72px);
+  --text-h2: clamp(24px, 4vw, 36px);
+  --text-body: clamp(16px, 2vw, 18px);
+  --text-small: clamp(13px, 1.5vw, 14px);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: var(--text-h1);
+}
+
+h2 {
+  font-size: var(--text-h2);
+}
+
+p {
+  font-size: var(--text-body);
+  margin: 0 0 var(--space-4) 0;
+}
+
+a, button {
+  font-family: inherit;
+  color: inherit;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: var(--bg);
+  padding: var(--space-2) var(--space-4);
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+section {
+  padding: var(--space-12) 0;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+.fade-section--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-section {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Header & Hero */
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-12) var(--space-4);
+}
+
+.hero-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.hero-logos img {
+  mix-blend-mode: multiply;
+  max-height: 80px;
+  width: auto;
+}
+
+.wordmark-fallback {
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-size: 2rem;
+  font-family: var(--font-body);
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content p {
+  color: var(--muted);
+  font-size: var(--text-body);
+  margin-bottom: var(--space-8);
+}
+
+/* Countdown */
+.countdown-container {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.countdown-block {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: var(--space-4);
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-value {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--primary);
+}
+
+.countdown-label {
+  font-size: var(--text-small);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--space-2);
+}
+
+#launched-message {
+  display: none;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--primary);
+  margin-bottom: var(--space-8);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: var(--bg);
+  padding: var(--space-3) var(--space-8);
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 200ms ease, opacity 200ms ease;
+  font-size: var(--text-body);
+}
+
+.btn:hover:not([disabled]) {
+  background: var(--primary-hover);
+}
+
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Upcoming Ventures Grid */
+.ventures-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+@media (max-width: 1023px) {
+  .ventures-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .ventures-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.venture-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.venture-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.venture-icon {
+  margin-bottom: var(--space-4);
+}
+
+.venture-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.badge {
+  background: transparent;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: 40px;
+  font-size: var(--text-small);
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.all-projects-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.coming-soon-text {
+  font-size: var(--text-small);
+  color: var(--muted);
+}
+
+/* Text Sections */
+.text-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat-line {
+  font-weight: 500;
+  color: var(--secondary);
+  margin-top: var(--space-6);
+  font-size: 1.1rem;
+}
+
+/* CTA Section */
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.cta-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: var(--text-body);
+  font-family: var(--font-body);
+}
+
+.cta-input::placeholder {
+  color: var(--muted);
+}
+
+.cta-btn {
+  width: 100%;
+}
+
+.feedback-msg {
+  display: none;
+  font-size: var(--text-small);
+  color: var(--primary);
+  margin-top: var(--space-2);
+  transition: opacity 300ms ease;
+  opacity: 0;
+}
+
+/* Social Follow */
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: var(--space-6);
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  border-top: 1px solid var(--border);
+  margin-top: var(--space-12);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: var(--text-small);
+  transition: color 200ms ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-hover);
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<header>
+  <div class="hero-logos fade-section">
+    <img src="arimitalogo.png" alt="ARIMITA logo mark" loading="eager">
+    <img src="arimitatxt.jpeg" alt="ARIMITA wordmark" loading="eager" onerror="this.outerHTML='<span class=\'wordmark-fallback\'>ARIMITA</span>'">
+  </div>
+  <div class="hero-content fade-section">
+    <h1>ARIMITA — A Venture Company.</h1>
+    <p>Launching June 13, 2026. Building the next generation of companies.</p>
+    
+    <div id="countdown-container" class="countdown-container">
+      <div class="countdown-block">
+        <span id="days" class="countdown-value">00</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-block">
+        <span id="hours" class="countdown-value">00</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-block">
+        <span id="minutes" class="countdown-value">00</span>
+        <span class="countdown-label">Mins</span>
+      </div>
+      <div class="countdown-block">
+        <span id="seconds" class="countdown-value">00</span>
+        <span class="countdown-label">Secs</span>
+      </div>
+    </div>
+    
+    <div id="launched-message">We Have Launched 🚀</div>
+    
+    <a href="#our-vision" class="btn">Learn More</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="container text-section fade-section" aria-labelledby="our-vision">
+    <h2 id="our-vision">Our Vision.</h2>
+    <p>ARIMITA is a parent venture company. We build, launch, and scale transformative startups across multiple industries. Our first wave of companies is coming soon.</p>
+  </section>
+
+  <section class="container fade-section" aria-labelledby="upcoming-ventures">
+    <div class="text-section">
+      <h2 id="upcoming-ventures">Upcoming Ventures.</h2>
+      <p class="muted">Project 1, Project 2, Project 3... and many more to come.</p>
+    </div>
+    
+    <div class="ventures-grid">
+      <div class="venture-card">
+        <svg class="venture-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke="var(--primary)" fill="none" stroke-width="2" d="M12 2L22 7.77V16.23L12 22L2 16.23V7.77L12 2Z"></path>
+          <path stroke="var(--primary)" fill="none" stroke-width="2" d="M12 22V12"></path>
+          <path stroke="var(--primary)" fill="none" stroke-width="2" d="M22 7.77L12 12L2 7.77"></path>
+        </svg>
+        <h3 class="venture-name">Project 1</h3>
+        <span class="badge">Announcing Soon</span>
+      </div>
+      
+      <div class="venture-card">
+        <svg class="venture-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="var(--primary)" fill="none" stroke-width="2"></circle>
+        </svg>
+        <h3 class="venture-name">Project 2</h3>
+        <span class="badge">Announcing Soon</span>
+      </div>
+      
+      <div class="venture-card">
+        <svg class="venture-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke="var(--primary)" fill="none" stroke-width="2" d="M12 2L22 20H2L12 2Z"></path>
+        </svg>
+        <h3 class="venture-name">Project 3</h3>
+        <span class="badge">Announcing Soon</span>
+      </div>
+      
+      <div class="venture-card">
+        <svg class="venture-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke="var(--primary)" fill="none" stroke-width="2" d="M12 2L21 7V17L12 22L3 17V7L12 2Z"></path>
+        </svg>
+        <h3 class="venture-name">Project 4</h3>
+        <span class="badge">Announcing Soon</span>
+      </div>
+    </div>
+    
+    <div class="all-projects-wrapper">
+      <button class="btn" disabled aria-disabled="true">View All Projects</button>
+      <span class="coming-soon-text">Coming soon</span>
+    </div>
+  </section>
+
+  <section class="container text-section fade-section" aria-labelledby="about-arimita">
+    <h2 id="about-arimita">About ARIMITA.</h2>
+    <p>ARIMITA is a startup venture studio. As a parent company, we create and nurture new businesses under our umbrella. More details will be revealed on June 13, 2026.</p>
+    <div class="stat-line">From zero to an ecosystem of ventures.</div>
+  </section>
+
+  <section class="container text-section fade-section" aria-labelledby="stay-updated">
+    <h2 id="stay-updated">Stay Updated</h2>
+    <div class="cta-form">
+      <input type="email" class="cta-input" aria-label="Email address" name="email" placeholder="your@email.com">
+      <button type="button" class="btn cta-btn" id="notify-btn">Notify Me</button>
+      <div class="feedback-msg" id="feedback-msg">Thanks! We'll notify you.</div>
+    </div>
+  </section>
+
+  <section class="container text-section fade-section" aria-labelledby="follow-for-updates">
+    <h2 id="follow-for-updates">Follow for Updates</h2>
+    <p class="muted">Stay connected with the founder for news about upcoming ventures.</p>
+    
+    <div class="social-links">
+      <a href="https://x.com/HariNagaSeshu?s=20" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow on X">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" stroke="var(--primary)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4l16 16m0-16L4 20"></path>
+        </svg>
+        Follow on X
+      </a>
+      <a href="https://www.linkedin.com/in/hari-naga-seshu-596711324" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow on LinkedIn">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" stroke="var(--primary)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+        Follow on LinkedIn
+      </a>
+      <a href="https://www.instagram.com/harinagaseshu?igsh=MXRkamZ1bTdpbmZzMg==" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow on Instagram">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" stroke="var(--primary)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        Follow on Instagram
+      </a>
+      <a href="mailto:dharinagaseshu@gmail.com" class="social-btn" aria-label="Send email">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" stroke="var(--primary)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        Send email
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 ARIMITA. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Use</a>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const targetDate = new Date(Date.UTC(2026, 5, 12, 18, 30, 0)).getTime();
+  let intervalId = null;
+  const daysEl = document.getElementById('days');
+  const hoursEl = document.getElementById('hours');
+  const minutesEl = document.getElementById('minutes');
+  const secondsEl = document.getElementById('seconds');
+  const container = document.getElementById('countdown-container');
+  const launchedMsg = document.getElementById('launched-message');
+
+  function updateCountdown() {
+    const now = Date.now();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+      container.style.display = 'none';
+      launchedMsg.style.display = 'block';
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    daysEl.textContent = days.toString().padStart(2, '0');
+    hoursEl.textContent = hours.toString().padStart(2, '0');
+    minutesEl.textContent = minutes.toString().padStart(2, '0');
+    secondsEl.textContent = seconds.toString().padStart(2, '0');
+  }
+
+  function startCountdown() {
+    updateCountdown();
+    if (Date.now() < targetDate) {
+      intervalId = setInterval(updateCountdown, 1000);
+    }
+  }
+
+  function stopCountdown() {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+  }
+
+  startCountdown();
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopCountdown();
+    } else {
+      startCountdown();
+    }
+  });
+
+  window.addEventListener('beforeunload', () => {
+    stopCountdown();
+  });
+
+  const notifyBtn = document.getElementById('notify-btn');
+  const feedbackMsg = document.getElementById('feedback-msg');
+
+  notifyBtn.addEventListener('click', () => {
+    notifyBtn.disabled = true;
+    feedbackMsg.style.display = 'block';
+    // Force reflow
+    void feedbackMsg.offsetWidth;
+    feedbackMsg.style.opacity = '1';
+
+    setTimeout(() => {
+      feedbackMsg.style.opacity = '0';
+      setTimeout(() => {
+        feedbackMsg.style.display = 'none';
+        notifyBtn.disabled = false;
+      }, 300);
+    }, 3000);
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-section--visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: "0px 0px -10% 0px",
+      threshold: 0
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-section').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  } else {
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-section').forEach(el => {
+        el.classList.add('fade-section--visible');
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
